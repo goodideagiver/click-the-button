@@ -1,4 +1,6 @@
 import { nameValidator, validatePassword } from './TheBestValidatorEver';
+import { triesCounterHandler } from './triesCounterHandler';
+import { formSuccesHandler } from './formSuccesHandler';
 
 export const formSubmitHandler = (event) => {
 	event.preventDefault();
@@ -7,7 +9,7 @@ export const formSubmitHandler = (event) => {
 	const name = data.get('name');
 	const password = data.get('password');
 
-	let valid = true;
+	triesCounterHandler();
 
 	try {
 		nameValidator(name);
@@ -17,4 +19,6 @@ export const formSubmitHandler = (event) => {
 		alert(error.message);
 		return;
 	}
+
+	formSuccesHandler();
 };

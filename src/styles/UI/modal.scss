@@ -11,6 +11,9 @@
 }
 
 .modal-content {
+	.hidden {
+		display: none;
+	}
 	height: fit-content;
 	background: white;
 	border-radius: 10px;

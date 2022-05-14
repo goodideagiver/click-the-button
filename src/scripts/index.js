@@ -1,6 +1,14 @@
 import { showModal } from './Modal';
-import { theBestButtonEver } from './Store';
-
-theBestButtonEver.addEventListener('click', showModal);
+import { theBestButtonEver } from './DOM-store';
 
 let userIsValid = false;
+
+theBestButtonEver.addEventListener('click', () => {
+	if (!userIsValid) {
+		showModal();
+	}
+});
+
+export const setUserValid = () => {
+	userIsValid = true;
+};
