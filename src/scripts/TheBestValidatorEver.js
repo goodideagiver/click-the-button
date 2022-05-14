@@ -3,9 +3,9 @@ const errorChadThrower = (error) => {
 };
 
 export const validatePassword = (password) => {
-	if (Math.random() < 0.1) {
+	if (Math.random() < 0.3) {
 		errorChadThrower(
-			'This is a random password error and it had 10% chance of happening'
+			'This is a random password error and it had 30% chance of happening'
 		);
 	}
 	if (password.length < 8) {
@@ -36,12 +36,16 @@ export const validatePassword = (password) => {
 			'Password must contain at least one euro sign. Tip: alt code 0128'
 		);
 	}
-
 	if (password.search(' ') === -1) {
 		errorChadThrower('Password must contain at least one space');
 	}
 	if (password.search('2137') === -1) {
 		errorChadThrower('Password must contain the number 2137');
+	}
+	if (password.search(/(.)\1/) !== -1) {
+		errorChadThrower(
+			'Password cannot contain two same characters in a row'
+		);
 	}
 };
 
