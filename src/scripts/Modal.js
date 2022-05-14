@@ -1,4 +1,4 @@
-import { formSubmitHandler } from './formHandler';
+import { formSubmitHandler } from './formScripts/formHandler';
 
 const modalTemplateElement = document.querySelector('#modal');
 

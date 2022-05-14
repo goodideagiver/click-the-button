@@ -1,7 +1,7 @@
-import { localStorageHandler } from './localStorageHandler';
+import { getAndUpdateTriesLocalStorage } from '../localStorageHandler';
 
 export const triesCounterHandler = () => {
-	const tries = localStorageHandler();
+	const tries = getAndUpdateTriesLocalStorage();
 
 	const counterElement = document.querySelector('.hidden');
 	const triesElement = document.getElementById('tries');

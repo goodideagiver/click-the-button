@@ -1,4 +1,4 @@
-import { Alert } from './components/Alert';
+import { Alert } from './../components/Alert';
 
 const showAlert = (alertMessage) => {
 	const alert = document.createElement('custom-alert');

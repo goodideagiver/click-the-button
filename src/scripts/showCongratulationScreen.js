@@ -1,5 +1,5 @@
 import { congratulationsElement } from './DOM-store';
 
-export const youHaveWon = () => {
+export const showCongratulationScreen = () => {
 	congratulationsElement.classList.remove('disabled');
 };

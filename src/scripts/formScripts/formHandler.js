@@ -1,7 +1,12 @@
-import { nameValidator, validatePassword } from './theBestValidatorEver';
-import { triesCounterHandler } from './triesCounterHandler';
+import {
+	nameValidator,
+	validatePassword,
+} from '../validation/theBestValidatorEver';
+
+import showAlert from './../alerts/showAlert';
+import { triesCounterHandler } from './../tries/triesCounterHandler';
+import { validatePassword } from './../validation/theBestValidatorEver';
 import { formSuccesHandler } from './formSuccesHandler';
-import showAlert from './showAlert';
 
 export const formSubmitHandler = (event) => {
 	event.preventDefault();

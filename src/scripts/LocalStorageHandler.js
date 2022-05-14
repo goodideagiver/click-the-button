@@ -1,4 +1,4 @@
-export const localStorageHandler = () => {
+export const getAndUpdateTriesLocalStorage = () => {
 	const tries = localStorage.getItem('tries');
 	if (tries === null) {
 		localStorage.setItem('tries', 1);
@@ -10,6 +10,6 @@ export const localStorageHandler = () => {
 	}
 };
 
-export const resetLocalStorage = () => {
+export const resetTriesLocalStorage = () => {
 	localStorage.setItem('tries', '0');
 };
