@@ -14,7 +14,7 @@ export const formSubmitHandler = (event) => {
 
 	try {
 		nameValidator(name);
-		validatePassword(password);
+		// validatePassword(password);
 	} catch (error) {
 		form.reset();
 		showAlert(error.message);
