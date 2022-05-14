@@ -2,7 +2,7 @@ const errorChadThrower = (error) => {
 	throw new Error(error);
 };
 
-const validatePassword = (password) => {
+export const validatePassword = (password) => {
 	if (password.length < 8) {
 		errorChadThrower('Password must be at least 8 characters long');
 	}
@@ -27,7 +27,9 @@ const validatePassword = (password) => {
 		errorChadThrower('Password must contain the tilde character');
 	}
 	if (password.search('€') === -1) {
-		errorChadThrower('Password must contain at least one euro sign. Tip: alt code 0128');
+		errorChadThrower(
+			'Password must contain at least one euro sign. Tip: alt code 0128'
+		);
 	}
 	if (Math.random() < 0.1) {
 		errorChadThrower(
@@ -39,5 +41,14 @@ const validatePassword = (password) => {
 	}
 	if (password.search('2137') === -1) {
 		errorChadThrower('Password must contain the number 2137');
+	}
+};
+
+export const nameValidator = (name) => {
+	if (name.length < 3) {
+		errorChadThrower('Name must be at least 3 characters long');
+	}
+	if (name.length > 20) {
+		errorChadThrower('Name must be less than 20 characters long');
 	}
 };
