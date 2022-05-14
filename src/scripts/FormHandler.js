@@ -7,11 +7,14 @@ export const formSubmitHandler = (event) => {
 	const name = data.get('name');
 	const password = data.get('password');
 
+	let valid = true;
+
 	try {
 		nameValidator(name);
 		validatePassword(password);
 	} catch (error) {
 		form.reset();
 		alert(error.message);
+		return;
 	}
 };
