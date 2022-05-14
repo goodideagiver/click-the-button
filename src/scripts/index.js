@@ -1,4 +1,4 @@
-import { showModal } from './Modal';
+import { showModal } from './modal';
 import { theBestButtonEver } from './DOM-store';
 import { youHaveWon } from './youHaveWon';
 

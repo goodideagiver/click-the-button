@@ -1,4 +1,4 @@
-import { localStorageHandler } from './LocalStorageHandler';
+import { localStorageHandler } from './localStorageHandler';
 
 export const triesCounterHandler = () => {
 	const tries = localStorageHandler();

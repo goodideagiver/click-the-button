@@ -1,4 +1,4 @@
-import { nameValidator, validatePassword } from './TheBestValidatorEver';
+import { nameValidator, validatePassword } from './theBestValidatorEver';
 import { triesCounterHandler } from './triesCounterHandler';
 import { formSuccesHandler } from './formSuccesHandler';
 import showAlert from './showAlert';
@@ -15,11 +15,9 @@ export const formSubmitHandler = (event) => {
 	try {
 		nameValidator(name);
 		validatePassword(password);
+		formSuccesHandler();
 	} catch (error) {
 		form.reset();
 		showAlert(error.message);
-		return;
 	}
-
-	formSuccesHandler();
 };

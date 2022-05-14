@@ -1,5 +1,5 @@
-import { resetLocalStorage } from './LocalStorageHandler';
-import { hideModal } from './Modal';
+import { resetLocalStorage } from './localStorageHandler';
+import { hideModal } from './modal';
 import { setUserValid } from './index';
 import showAlert from './showAlert';
 
