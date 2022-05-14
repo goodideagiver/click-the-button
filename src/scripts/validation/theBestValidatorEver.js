@@ -2,8 +2,8 @@ import { getRandomASCI } from './getRandomASCI';
 
 const selectedSpecialChar = getRandomASCI();
 
-const errorChadThrower = (error) => {
-	throw new Error(error);
+const errorChadThrower = (message) => {
+	throw new Error(message);
 };
 
 export const validatePassword = (password) => {
