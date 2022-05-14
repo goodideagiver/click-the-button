@@ -9,4 +9,7 @@ export const showSuccessAlert = () => {
 			tries
 		)}!`
 	);
+	setTimeout(() => {
+		showAlert('Now you can click the button');
+	}, 3500);
 };

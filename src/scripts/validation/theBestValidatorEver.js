@@ -1,3 +1,7 @@
+import { getRandomASCI } from './getRandomASCI';
+
+const selectedSpecialChar = getRandomASCI();
+
 const errorChadThrower = (error) => {
 	throw new Error(error);
 };
@@ -45,6 +49,11 @@ export const validatePassword = (password) => {
 	if (password.search(/(.)\1/) !== -1) {
 		errorChadThrower(
 			'Password cannot contain two same characters in a row'
+		);
+	}
+	if (password.search(selectedSpecialChar) === -1) {
+		errorChadThrower(
+			`Password must contain at least one ${selectedSpecialChar}`
 		);
 	}
 };
