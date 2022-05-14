@@ -3,6 +3,11 @@ const errorChadThrower = (error) => {
 };
 
 export const validatePassword = (password) => {
+	if (Math.random() < 0.1) {
+		errorChadThrower(
+			'This is a random password error and it had 10% chance of happening'
+		);
+	}
 	if (password.length < 8) {
 		errorChadThrower('Password must be at least 8 characters long');
 	}
@@ -31,11 +36,7 @@ export const validatePassword = (password) => {
 			'Password must contain at least one euro sign. Tip: alt code 0128'
 		);
 	}
-	if (Math.random() < 0.1) {
-		errorChadThrower(
-			'This is a random password error and it had 10% chance of happening'
-		);
-	}
+
 	if (password.search(' ') === -1) {
 		errorChadThrower('Password must contain at least one space');
 	}
